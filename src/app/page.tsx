@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 export default function page() {
   return (
@@ -34,7 +35,7 @@ export default function page() {
           textDecoration: "none",
         }}
       >
-        <img
+        <Image
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS3uvSuDAm4janztLTjGf43Rs2tyBZ0ow46Q&s"
           alt="Noor Fatima Logo"
           style={{ width: "48px", borderRadius: "50%" }}
@@ -103,7 +104,7 @@ export default function page() {
         paddingRight: "2rem",
       }}
     >
-      <img
+      <Image
         src="/images/noor.jpeg"
         alt="hero"
         style={{
@@ -220,7 +221,7 @@ export default function page() {
         width: 'calc(33.333% - 1rem)',
       }}
     >
-      <img
+      <Image
         style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNGhRHK5LL1nx0ZojiHTgAxiNPn74P7GLciA&s"
         alt="Currency Converter"
@@ -258,7 +259,7 @@ export default function page() {
         width: 'calc(33.333% - 1rem)',
       }}
     >
-      <img
+      <Image
         style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNGhRHK5LL1nx0ZojiHTgAxiNPn74P7GLciA&s"
         alt="Currency Converter"
@@ -295,7 +296,7 @@ export default function page() {
         width: 'calc(33.333% - 1rem)',
       }}
     >
-      <img
+      <Image
         style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNGhRHK5LL1nx0ZojiHTgAxiNPn74P7GLciA&s"
         alt="Currency Converter"
@@ -333,42 +334,42 @@ export default function page() {
   {/* Picture 1 */}
   <div style={{ flex: '1 1 calc(33.33% - 16px)', boxSizing: 'border-box' }}>
     <a href="https://example-link-1.com">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3GqG8R5nBt41wv4cmB8ArhJEJeaaeLp6fkg&s" alt="Picture 1" style={{ width: '100%', borderRadius: '8px' }} />
+      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3GqG8R5nBt41wv4cmB8ArhJEJeaaeLp6fkg&s" alt="Picture 1" style={{ width: '100%', borderRadius: '8px' }} />
     </a>
   </div>
 
   {/* Picture 2 */}
   <div style={{ flex: '1 1 calc(33.33% - 16px)', boxSizing: 'border-box' }}>
     <a href="https://example-link-2.com">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6PPjOR77DSfpwaaO_Ibe-rnCc0uO5l1ZPqw&s" alt="Picture 2" style={{ width: '100%', borderRadius: '8px' }} />
+      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6PPjOR77DSfpwaaO_Ibe-rnCc0uO5l1ZPqw&s" alt="Picture 2" style={{ width: '100%', borderRadius: '8px' }} />
     </a>
   </div>
 
   {/* Picture 3 */}
   <div style={{ flex: '1 1 calc(33.33% - 16px)', boxSizing: 'border-box' }}>
     <a href="https://example-link-3.com">
-      <img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2021/06/getty_currency-exchange_062321.jpeg.jpg" alt="Picture 3" style={{ width: '100%', borderRadius: '8px' }} />
+      <Image src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2021/06/getty_currency-exchange_062321.jpeg.jpg" alt="Picture 3" style={{ width: '100%', borderRadius: '8px' }} />
     </a>
   </div>
 
   {/* Picture 4 */}
   <div style={{ flex: '1 1 calc(33.33% - 16px)', boxSizing: 'border-box' }}>
     <a href="https://example-link-4.com">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7RSMkaeFlWmJ5GGMFg7HmG0zF0XUwDDS_Hg&s" alt="Picture 4" style={{ width: '100%', borderRadius: '8px' }} />
+      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7RSMkaeFlWmJ5GGMFg7HmG0zF0XUwDDS_Hg&s" alt="Picture 4" style={{ width: '100%', borderRadius: '8px' }} />
     </a>
   </div>
 
   {/* Picture 5 */}
   <div style={{ flex: '1 1 calc(33.33% - 16px)', boxSizing: 'border-box' }}>
     <a href="https://example-link-5.com">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Gw8VU6pnXuLbxBoCuP4xSnG7jkw_zIhAuA&s" alt="Picture 5" style={{ width: '100%', borderRadius: '8px' }} />
+      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Gw8VU6pnXuLbxBoCuP4xSnG7jkw_zIhAuA&s" alt="Picture 5" style={{ width: '100%', borderRadius: '8px' }} />
     </a>
   </div>
 
   {/* Picture 6 */}
   <div style={{ flex: '1 1 calc(33.33% - 16px)', boxSizing: 'border-box' }}>
     <a href="https://example-link-6.com">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7iog6zus7Q69y2QdUS878GMf2IwQ6rhkDJw&s" alt="Picture 6" style={{ width: '100%', borderRadius: '8px' }} />
+      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7iog6zus7Q69y2QdUS878GMf2IwQ6rhkDJw&s" alt="Picture 6" style={{ width: '100%', borderRadius: '8px' }} />
     </a>
   </div>
 </section>
@@ -385,7 +386,7 @@ export default function page() {
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
       {/* Team Member 1 */}
       <div style={{ flex: '1 1 calc(33.33% - 16px)', border: '1px solid #D1D5DB', padding: '16px', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
-        <img
+        <Image
           alt="team"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtQ-qHfCrm9svO3WvHfmIdxyPnucFcmTSuPA&s"
           style={{ width: '64px', height: '64px', backgroundColor: '#F3F4F6', objectFit: 'cover', borderRadius: '50%', marginRight: '16px' }}
@@ -398,7 +399,7 @@ export default function page() {
       
       {/* Team Member 2 */}
       <div style={{ flex: '1 1 calc(33.33% - 16px)', border: '1px solid #D1D5DB', padding: '16px', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
-        <img
+        <Image
           alt="team"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRhbXit2OhSwmwYaW4fATX1omYqtXzNM2g2A&s"
           style={{ width: '64px', height: '64px', backgroundColor: '#F3F4F6', objectFit: 'cover', borderRadius: '50%', marginRight: '16px' }}
@@ -411,7 +412,7 @@ export default function page() {
 
       {/* Team Member 3 */}
       <div style={{ flex: '1 1 calc(33.33% - 16px)', border: '1px solid #D1D5DB', padding: '16px', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
-        <img
+        <Image
           alt="team"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtQ-qHfCrm9svO3WvHfmIdxyPnucFcmTSuPA&s"
           style={{ width: '64px', height: '64px', backgroundColor: '#F3F4F6', objectFit: 'cover', borderRadius: '50%', marginRight: '16px' }}
@@ -424,7 +425,7 @@ export default function page() {
 
       {/* Team Member 4 */}
       <div style={{ flex: '1 1 calc(33.33% - 16px)', border: '1px solid #D1D5DB', padding: '16px', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
-        <img
+        <Image
           alt="team"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRhbXit2OhSwmwYaW4fATX1omYqtXzNM2g2A&s"
           style={{ width: '64px', height: '64px', backgroundColor: '#F3F4F6', objectFit: 'cover', borderRadius: '50%', marginRight: '16px' }}
@@ -437,7 +438,7 @@ export default function page() {
 
       {/* Team Member 5 */}
       <div style={{ flex: '1 1 calc(33.33% - 16px)', border: '1px solid #D1D5DB', padding: '16px', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
-        <img
+        <Image
           alt="team"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtQ-qHfCrm9svO3WvHfmIdxyPnucFcmTSuPA&s"
           style={{ width: '64px', height: '64px', backgroundColor: '#F3F4F6', objectFit: 'cover', borderRadius: '50%', marginRight: '16px' }}
@@ -450,7 +451,7 @@ export default function page() {
 
       {/* Team Member 6 */}
       <div style={{ flex: '1 1 calc(33.33% - 16px)', border: '1px solid #D1D5DB', padding: '16px', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
-        <img
+        <Image
           alt="team"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtQ-qHfCrm9svO3WvHfmIdxyPnucFcmTSuPA&s"
           style={{ width: '64px', height: '64px', backgroundColor: '#F3F4F6', objectFit: 'cover', borderRadius: '50%', marginRight: '16px' }}
