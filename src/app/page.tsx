@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 
@@ -5,8 +7,7 @@ export default function page() {
   return (
     <div>
     
-   
-    <div style={{ backgroundColor: "#2d2d2e" }}>
+  <div style={{ backgroundColor: "#2d2d2e" }}>
   <header
     style={{
       backgroundColor: "#6b7280",
@@ -24,8 +25,10 @@ export default function page() {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
+        flexWrap: "wrap",
       }}
     >
+      {/* Logo Section */}
       <a
         href="#"
         style={{
@@ -33,157 +36,205 @@ export default function page() {
           alignItems: "center",
           color: "white",
           textDecoration: "none",
+          marginBottom: "10px",
         }}
       >
         <Image
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS3uvSuDAm4janztLTjGf43Rs2tyBZ0ow46Q&s"
+          src="/images/noor.jpeg"
           alt="Noor Fatima Logo"
-          style={{ width: "48px", borderRadius: "50%" }}
+          width={48}
+          height={48}
+          style={{ width: "48px", height: "48px", borderRadius: "50%" }}
         />
-        <span style={{ marginLeft: "10px", fontSize: "20px", fontWeight: "bold" }}>
+        <span
+          style={{
+            marginLeft: "10px",
+            fontSize: "20px",
+            fontWeight: "bold",
+          }}
+        >
           Noor Fatima
         </span>
       </a>
+
+      {/* Navigation Section */}
       <nav
         style={{
           display: "flex",
           gap: "20px",
           alignItems: "center",
+          flexWrap: "wrap",
+          justifyContent: "center",
         }}
       >
-        <a href="http://localhost:3000" style={{ color: "white", fontWeight: "bold", textDecoration: "none" }}>
+        <a
+          href="/"
+          style={{
+            color: "white",
+            fontWeight: "bold",
+            textDecoration: "none",
+          }}
+        >
           Home
         </a>
-        <a href="http://localhost:3000/about" style={{ color: "white", fontWeight: "bold", textDecoration: "none" }}>
+        <a
+          href="/about"
+          style={{
+            color: "white",
+            fontWeight: "bold",
+            textDecoration: "none",
+          }}
+        >
           About Us
         </a>
-        <a href="http://localhost:3000/contact" style={{ color: "white", fontWeight: "bold", textDecoration: "none" }}>
+        <a
+          href="/contact"
+          style={{
+            color: "white",
+            fontWeight: "bold",
+            textDecoration: "none",
+          }}
+        >
           Contact Us
         </a>
-        <a href="http://localhost:3000/privacypolicy" style={{ color: "white", fontWeight: "bold", textDecoration: "none" }}>
+        <a
+          href="/privacypolicy"
+          style={{
+            color: "white",
+            fontWeight: "bold",
+            textDecoration: "none",
+          }}
+        >
           Privacy Policy
         </a>
-        <a href="http://localhost:3000/projects" style={{ color: "white", fontWeight: "bold", textDecoration: "none" }}>
-          Projects
-        </a>
+       
       </nav>
-      <button
-        style={{
-          backgroundColor: "#6366f1",
-          color: "white",
-          border: "none",
-          padding: "8px 16px",
-          borderRadius: "4px",
-          cursor: "pointer",
-        }}
-      >
-        Login
-      </button>
+
+      
     </div>
   </header>
 </div>
-{/*hero section */}
-<section style={{ color: "#d1d5db", fontFamily: "Arial, sans-serif", padding: "6rem 0", backgroundColor: "#1f2937" }}>
+{/* Hero section */}
+<section
+  style={{
+    color: '#d1d5db',
+    fontFamily: 'Arial, sans-serif',
+    padding: '60px 20px',
+    display: 'flex',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#1a202c',
+  }}
+>
   <div
     style={{
-      display: "flex",
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "center",
-      maxWidth: "1200px",
-      margin: "0 auto",
-      padding: "0 1.25rem",
+      maxWidth: '1200px',
+      margin: '0 auto',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      textAlign: 'center',
     }}
   >
     {/* Image on the Left */}
     <div
       style={{
-        flex: "1",
-        display: "flex",
-        justifyContent: "center",
-        paddingRight: "2rem",
+        width: '100%',
+        maxWidth: '300px',
+        marginBottom: '20px',
       }}
     >
-      <Image
+      <img
         src="/images/noor.jpeg"
         alt="hero"
         style={{
-          borderRadius: "50%",
-          boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5)",
-          width: "20rem",
-          height: "20rem",
-          objectFit: "cover",
-          objectPosition: "center",
+          width: '100%',
+          height: 'auto',
+          borderRadius: '50%',
+          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.3)',
+          transition: 'transform 0.3s',
         }}
+        onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+        onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
       />
     </div>
 
-    {/* Content on the Right */}
+    {/* Content Section */}
     <div
       style={{
-        flex: "1",
-        color: "white",
-        paddingLeft: "2rem",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-start",
-        textAlign: "left",
+        width: '100%',
+        maxWidth: '600px',
+        textAlign: 'left',
+        margin: '20px 0',
       }}
     >
       <h1
         style={{
-          color: "#f59e0b",
-          fontSize: "2rem",
-          marginBottom: "1rem",
-          fontWeight: "600",
-          fontFamily: "serif",
-          backgroundColor: "rgba(0, 0, 0, 0.5)",
-          padding: "0.5rem",
-          borderRadius: "0.5rem",
+          fontSize: '28px',
+          fontWeight: 'bold',
+          color: '#fbbf24',
+          marginBottom: '16px',
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          padding: '8px',
+          borderRadius: '8px',
         }}
       >
         Expertise in HTML, CSS, JavaScript, TypeScript
       </h1>
-
       <h2
         style={{
-          fontWeight: "800",
-          backgroundColor: "#f59e0b",
-          color: "white",
-          padding: "0.5rem",
-          marginBottom: "1rem",
-          borderRadius: "0.5rem",
-          boxShadow: "0 5px 15px rgba(0, 0, 0, 0.3)",
+          fontSize: '24px',
+          fontWeight: '800',
+          color: '#ffffff',
+          backgroundColor: '#fbbf24',
+          padding: '8px',
+          borderRadius: '8px',
+          marginBottom: '16px',
+          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.3)',
         }}
       >
-        Web Developer, GIAIC Student Quarter 2
+        Web Developer | GIAIC Student Quarter 2
       </h2>
-
       <p
         style={{
-          marginBottom: "2rem",
-          fontWeight: "700",
-          backgroundColor: "rgba(245, 158, 11, 0.8)",
-          padding: "1rem",
-          borderRadius: "0.5rem",
-          boxShadow: "0 5px 15px rgba(0, 0, 0, 0.3)",
+          fontSize: '18px',
+          lineHeight: '1.6',
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          padding: '16px',
+          borderRadius: '8px',
+          color: '#ffffff',
+          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.3)',
         }}
       >
-        My name is Noor Fatima, and my portfolio is a representation of all that I’ve learned and accomplished as an Information Technology student.
+        My name is Noor Fatima, and my portfolio is a representation of all
+        that I’ve learned and accomplished as an Information Technology
+        student.
       </p>
-
-      <div style={{ display: "flex", justifyContent: "flex-start" }}>
+      <div
+        style={{
+          marginTop: '20px',
+          textAlign: 'left',
+        }}
+      >
         <button
           style={{
-            backgroundColor: "#1d4ed8",
-            color: "white",
-            border: "none",
-            padding: "0.5rem 1.5rem",
-            borderRadius: "0.25rem",
-            fontSize: "1rem",
-            cursor: "pointer",
-            boxShadow: "0 5px 15px rgba(0, 0, 0, 0.3)",
+            backgroundColor: '#1e40af',
+            color: '#ffffff',
+            padding: '12px 24px',
+            border: 'none',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            transition: 'background-color 0.3s',
+            boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.3)',
           }}
+          onMouseOver={(e) =>
+            (e.currentTarget.style.backgroundColor = '#1e3a8a')
+          }
+          onMouseOut={(e) =>
+            (e.currentTarget.style.backgroundColor = '#1e40af')
+          }
         >
           Subscribe Now
         </button>
@@ -191,8 +242,9 @@ export default function page() {
     </div>
   </div>
 </section>
-{/*Blog section */}
 
+
+{/*Blog section */}
 <section
   style={{
     background: 'linear-gradient(to right, #2d2d2d, #2d2d2d)',
@@ -218,20 +270,37 @@ export default function page() {
         borderRadius: '0.5rem',
         overflow: 'hidden',
         boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)',
-        width: 'calc(33.333% - 1rem)',
+        flex: '1 1 calc(100% - 1rem)', // Full width for small screens
+        maxWidth: 'calc(33.333% - 1rem)', // One-third width for large screens
+        padding: '1rem', // Extra padding for smaller screens
       }}
     >
       <Image
         style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNGhRHK5LL1nx0ZojiHTgAxiNPn74P7GLciA&s"
-        alt="Currency Converter"
+        src="/images/calculator.jpeg"
+        alt="Calculator"
+        height={200}
+        width={200}
       />
-      <div style={{ padding: '1.5rem' }}>
-        <h1 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>
-          Currency Converter
+      <div style={{ padding: '1rem' }}>
+        <h1
+          style={{
+            fontSize: '1.1rem',
+            marginBottom: '0.5rem',
+            textAlign: 'center', // Center text for small screens
+          }}
+        >
+          Calculator
         </h1>
-        <p style={{ marginBottom: '1rem', color: '#d1d1d1' }}>
-          This is a CLI-based currency converter.
+        <p
+          style={{
+            marginBottom: '0.75rem',
+            color: '#d1d1d1',
+            fontSize: '0.9rem', // Smaller font size for better responsiveness
+            textAlign: 'center',
+          }}
+        >
+          A simple CLI-based calculator for basic operations.
         </p>
         <a
           href="#"
@@ -239,8 +308,8 @@ export default function page() {
             color: '#4f83ff',
             textDecoration: 'none',
             fontWeight: 'bold',
-            display: 'inline-flex',
-            alignItems: 'center',
+            display: 'block',
+            textAlign: 'center',
           }}
         >
           Learn More
@@ -248,7 +317,7 @@ export default function page() {
       </div>
     </div>
 
-    {/* card 2 */}
+    {/* Card 2 */}
     <div
       style={{
         background: '#1a1a1a',
@@ -256,20 +325,37 @@ export default function page() {
         borderRadius: '0.5rem',
         overflow: 'hidden',
         boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)',
-        width: 'calc(33.333% - 1rem)',
+        flex: '1 1 calc(100% - 1rem)',
+        maxWidth: 'calc(33.333% - 1rem)',
+        padding: '1rem',
       }}
     >
       <Image
         style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNGhRHK5LL1nx0ZojiHTgAxiNPn74P7GLciA&s"
+        src="/images/currency.jpeg"
         alt="Currency Converter"
+        height={200}
+        width={200}
       />
-      <div style={{ padding: '1.5rem' }}>
-        <h1 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>
+      <div style={{ padding: '1rem' }}>
+        <h1
+          style={{
+            fontSize: '1.1rem',
+            marginBottom: '0.5rem',
+            textAlign: 'center',
+          }}
+        >
           Currency Converter
         </h1>
-        <p style={{ marginBottom: '1rem', color: '#d1d1d1' }}>
-          This is a CLI-based currency converter.
+        <p
+          style={{
+            marginBottom: '0.75rem',
+            color: '#d1d1d1',
+            fontSize: '0.9rem',
+            textAlign: 'center',
+          }}
+        >
+          Convert currencies using a simple CLI interface.
         </p>
         <a
           href="#"
@@ -277,195 +363,361 @@ export default function page() {
             color: '#4f83ff',
             textDecoration: 'none',
             fontWeight: 'bold',
-            display: 'inline-flex',
-            alignItems: 'center',
+            display: 'block',
+            textAlign: 'center',
           }}
         >
           Learn More
         </a>
       </div>
-      </div>
-       {/* card 3*/}
-    <div
-      style={{
-        background: '#1a1a1a',
-        border: '1px solid #444',
-        borderRadius: '0.5rem',
-        overflow: 'hidden',
-        boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)',
-        width: 'calc(33.333% - 1rem)',
-      }}
-    >
-      <Image
-        style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNGhRHK5LL1nx0ZojiHTgAxiNPn74P7GLciA&s"
-        alt="Currency Converter"
-      />
-      <div style={{ padding: '1.5rem' }}>
-        <h1 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>
-          Currency Converter
-        </h1>
-        <p style={{ marginBottom: '1rem', color: '#d1d1d1' }}>
-          This is a CLI-based currency converter.
-        </p>
-        <a
-          href="#"
-          style={{
-            color: '#4f83ff',
-            textDecoration: 'none',
-            fontWeight: 'bold',
-            display: 'inline-flex',
-            alignItems: 'center',
-          }}
-        >
-          Learn More
-        </a>
- </div>
- </div>
-
-    {/* Repeat the same structure for Card 2 and Card 3 */}
- 
     </div>
- 
+
+    {/* Card 3 */}
+    <div
+      style={{
+        background: '#1a1a1a',
+        border: '1px solid #444',
+        borderRadius: '0.5rem',
+        overflow: 'hidden',
+        boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)',
+        flex: '1 1 calc(100% - 1rem)',
+        maxWidth: 'calc(33.333% - 1rem)',
+        padding: '1rem',
+      }}
+    >
+      <Image
+        style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+        src="/images/countdown.jpeg"
+        alt="Countdown Timer"
+        height={200}
+        width={200}
+      />
+      <div style={{ padding: '1rem' }}>
+        <h1
+          style={{
+            fontSize: '1.1rem',
+            marginBottom: '0.5rem',
+            textAlign: 'center',
+          }}
+        >
+          Countdown Timer
+        </h1>
+        <p
+          style={{
+            marginBottom: '0.75rem',
+            color: '#d1d1d1',
+            fontSize: '0.9rem',
+            textAlign: 'center',
+          }}
+        >
+          Set a timer easily with this CLI tool.
+        </p>
+        <a
+          href="#"
+          style={{
+            color: '#4f83ff',
+            textDecoration: 'none',
+            fontWeight: 'bold',
+            display: 'block',
+            textAlign: 'center',
+          }}
+        >
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
-{/* gallery */}
 
-<section style={{ backgroundColor: '#4B5563', padding: '20px', display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
-  {/* Picture 1 */}
-  <div style={{ flex: '1 1 calc(33.33% - 16px)', boxSizing: 'border-box' }}>
-    <a href="https://example-link-1.com">
-      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3GqG8R5nBt41wv4cmB8ArhJEJeaaeLp6fkg&s" alt="Picture 1" style={{ width: '100%', borderRadius: '8px' }} />
-    </a>
-  </div>
 
-  {/* Picture 2 */}
-  <div style={{ flex: '1 1 calc(33.33% - 16px)', boxSizing: 'border-box' }}>
-    <a href="https://example-link-2.com">
-      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6PPjOR77DSfpwaaO_Ibe-rnCc0uO5l1ZPqw&s" alt="Picture 2" style={{ width: '100%', borderRadius: '8px' }} />
-    </a>
-  </div>
-
-  {/* Picture 3 */}
-  <div style={{ flex: '1 1 calc(33.33% - 16px)', boxSizing: 'border-box' }}>
-    <a href="https://example-link-3.com">
-      <Image src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2021/06/getty_currency-exchange_062321.jpeg.jpg" alt="Picture 3" style={{ width: '100%', borderRadius: '8px' }} />
-    </a>
-  </div>
-
-  {/* Picture 4 */}
-  <div style={{ flex: '1 1 calc(33.33% - 16px)', boxSizing: 'border-box' }}>
-    <a href="https://example-link-4.com">
-      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7RSMkaeFlWmJ5GGMFg7HmG0zF0XUwDDS_Hg&s" alt="Picture 4" style={{ width: '100%', borderRadius: '8px' }} />
-    </a>
-  </div>
-
-  {/* Picture 5 */}
-  <div style={{ flex: '1 1 calc(33.33% - 16px)', boxSizing: 'border-box' }}>
-    <a href="https://example-link-5.com">
-      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Gw8VU6pnXuLbxBoCuP4xSnG7jkw_zIhAuA&s" alt="Picture 5" style={{ width: '100%', borderRadius: '8px' }} />
-    </a>
-  </div>
-
-  {/* Picture 6 */}
-  <div style={{ flex: '1 1 calc(33.33% - 16px)', boxSizing: 'border-box' }}>
-    <a href="https://example-link-6.com">
-      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7iog6zus7Q69y2QdUS878GMf2IwQ6rhkDJw&s" alt="Picture 6" style={{ width: '100%', borderRadius: '8px' }} />
-    </a>
-  </div>
-</section>
 {/* our Team */}
-<section style={{ backgroundColor: '#4B5563', color: '#4B5563', padding: '48px 20px' }}>
-  <div style={{ margin: '0 auto', maxWidth: '1200px' }}>
-    <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-      <h1 style={{ fontSize: '24px', fontWeight: '500', color: '#D97706', marginBottom: '16px' }}>Our Team</h1>
-      <p style={{ maxWidth: '66%', margin: '0 auto', fontSize: '16px', fontWeight: '600', color: '#6B7280' }}>
-        Here is My Zoom Live Class Team Members.
+<div style={{
+        
+        
+        background: 'linear-gradient(to right, #2d2d2d, #2d2d2d)',
+        color: '#f1f1f1',
+        padding: '6rem 0',
+}
+}>
+<section className="text-gray-600 body-font">
+  <div className="container px-5 py-12 mx-auto">
+    <div className="flex flex-col text-center w-full mb-20">
+      <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-yellow-600" style={{ fontSize: "2rem", fontWeight: "500", color: "#F6E05E" }}>Our Team</h1>
+      <p className="lg:w-2/3 mx-auto leading-relaxed text-base font-semibold text-gray-500" style={{ color: "#A0AEC0", fontSize: "1rem", fontWeight: "600", marginBottom: "20px" }}>
+        Here is My zoom Live class Team Members.
       </p>
     </div>
-
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+    <div
+      className="team-grid"
+      style={{
+        
+        
+        background: 'linear-gradient(to right, #2d2d2d, #2d2d2d)',
+        color: '#f1f1f1',
+        padding: '6rem 0',
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+        gap: "16px",
+        marginBottom: "24px",
+        backgroundColor: "gray-400",
+       
+      }}
+    >
       {/* Team Member 1 */}
-      <div style={{ flex: '1 1 calc(33.33% - 16px)', border: '1px solid #D1D5DB', padding: '16px', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
-        <Image
+      <div className="team-member" style={{
+        display: "flex", 
+        alignItems: "center", 
+        border: "1px solid #E5E5E5", 
+        padding: "16px", 
+        borderRadius: "8px",
+        backgroundColor: "#ffffff"
+      }}>
+        <img
           alt="team"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtQ-qHfCrm9svO3WvHfmIdxyPnucFcmTSuPA&s"
-          style={{ width: '64px', height: '64px', backgroundColor: '#F3F4F6', objectFit: 'cover', borderRadius: '50%', marginRight: '16px' }}
+          className="team-image"
+          src="/images/teamgirl.jpeg"
+          style={{
+            width: "64px", 
+            height: "64px", 
+            backgroundColor: "#f7fafc", 
+            objectFit: "cover", 
+            borderRadius: "50%", 
+            marginRight: "16px"
+          }}
         />
         <div>
-          <h2 style={{ color: '#D97706', fontWeight: '500', marginBottom: '4px' }}>Pashmeen Zia</h2>
-          <p style={{ color: '#6B7280' }}>UI Designer</p>
+          <h2 className="team-name" style={{
+            color: "#F6E05E", 
+            fontSize: "18px", 
+            fontWeight: "500"
+          }}>Pashmeen Zia</h2>
+          <p className="team-role" style={{
+            color: "#A0AEC0", 
+            fontSize: "14px"
+          }}>UI Designer</p>
         </div>
-        </div>
-      
+      </div>
+
       {/* Team Member 2 */}
-      <div style={{ flex: '1 1 calc(33.33% - 16px)', border: '1px solid #D1D5DB', padding: '16px', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
-        <Image
+      <div className="team-member" style={{
+        display: "flex", 
+        alignItems: "center", 
+        border: "1px solid #E5E5E5", 
+        padding: "16px", 
+        borderRadius: "8px",
+        backgroundColor: "#ffffff"
+      }}>
+        <img
           alt="team"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRhbXit2OhSwmwYaW4fATX1omYqtXzNM2g2A&s"
-          style={{ width: '64px', height: '64px', backgroundColor: '#F3F4F6', objectFit: 'cover', borderRadius: '50%', marginRight: '16px' }}
+          className="team-image"
+          src="/images/teamboy.jpeg"
+          style={{
+            width: "64px", 
+            height: "64px", 
+            backgroundColor: "#f7fafc", 
+            objectFit: "cover", 
+            borderRadius: "50%", 
+            marginRight: "16px"
+          }}
         />
         <div>
-          <h2 style={{ color: '#D97706', fontWeight: '500', marginBottom: '4px' }}>Abdullah Kashif</h2>
-          <p style={{ color: '#6B7280' }}>Developer</p>
+          <h2 className="team-name" style={{
+            color: "#F6E05E", 
+            fontSize: "18px", 
+            fontWeight: "500"
+          }}>Abdullah Kashif</h2>
+          <p className="team-role" style={{
+            color: "#A0AEC0", 
+            fontSize: "14px"
+          }}>Developer</p>
         </div>
       </div>
 
       {/* Team Member 3 */}
-      <div style={{ flex: '1 1 calc(33.33% - 16px)', border: '1px solid #D1D5DB', padding: '16px', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
-        <Image
+      <div className="team-member" style={{
+        display: "flex", 
+        alignItems: "center", 
+        border: "1px solid #E5E5E5", 
+        padding: "16px", 
+        borderRadius: "8px",
+        backgroundColor: "#ffffff"
+      }}>
+        <img
           alt="team"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtQ-qHfCrm9svO3WvHfmIdxyPnucFcmTSuPA&s"
-          style={{ width: '64px', height: '64px', backgroundColor: '#F3F4F6', objectFit: 'cover', borderRadius: '50%', marginRight: '16px' }}
+          className="team-image"
+          src="/images/teamgirl.jpeg"
+          style={{
+            width: "64px", 
+            height: "64px", 
+            backgroundColor: "#f7fafc", 
+            objectFit: "cover", 
+            borderRadius: "50%", 
+            marginRight: "16px"
+          }}
         />
         <div>
-          <h2 style={{ color: '#D97706', fontWeight: '500', marginBottom: '4px' }}>Hafsa Kamali</h2>
-          <p style={{ color: '#6B7280' }}>Developer</p>
+          <h2 className="team-name" style={{
+            color: "#F6E05E", 
+            fontSize: "18px", 
+            fontWeight: "500"
+          }}>Hafsa Kamali</h2>
+          <p className="team-role" style={{
+            color: "#A0AEC0", 
+            fontSize: "14px"
+          }}>Developer</p>
         </div>
       </div>
 
       {/* Team Member 4 */}
-      <div style={{ flex: '1 1 calc(33.33% - 16px)', border: '1px solid #D1D5DB', padding: '16px', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
-        <Image
+      <div className="team-member" style={{
+        display: "flex", 
+        alignItems: "center", 
+        border: "1px solid #E5E5E5", 
+        padding: "16px", 
+        borderRadius: "8px",
+        backgroundColor: "#ffffff"
+      }}>
+        <img
           alt="team"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRhbXit2OhSwmwYaW4fATX1omYqtXzNM2g2A&s"
-          style={{ width: '64px', height: '64px', backgroundColor: '#F3F4F6', objectFit: 'cover', borderRadius: '50%', marginRight: '16px' }}
+          className="team-image"
+          src="/images/teamboy.jpeg"
+          style={{
+            width: "64px", 
+            height: "64px", 
+            backgroundColor: "#f7fafc", 
+            objectFit: "cover", 
+            borderRadius: "50%", 
+            marginRight: "16px"
+          }}
         />
         <div>
-          <h2 style={{ color: '#D97706', fontWeight: '500', marginBottom: '4px' }}>Uzair Khijli</h2>
-          <p style={{ color: '#6B7280' }}>DevOps</p>
+          <h2 className="team-name" style={{
+            color: "#F6E05E", 
+            fontSize: "18px", 
+            fontWeight: "500"
+          }}>Uzair Khijli</h2>
+          <p className="team-role" style={{
+            color: "#A0AEC0", 
+            fontSize: "14px"
+          }}>DevOps</p>
         </div>
       </div>
 
       {/* Team Member 5 */}
-      <div style={{ flex: '1 1 calc(33.33% - 16px)', border: '1px solid #D1D5DB', padding: '16px', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
-        <Image
+      <div className="team-member" style={{
+        display: "flex", 
+        alignItems: "center", 
+        border: "1px solid #E5E5E5", 
+        padding: "16px", 
+        borderRadius: "8px",
+        backgroundColor: "#ffffff"
+      }}>
+        <img
           alt="team"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtQ-qHfCrm9svO3WvHfmIdxyPnucFcmTSuPA&s"
-          style={{ width: '64px', height: '64px', backgroundColor: '#F3F4F6', objectFit: 'cover', borderRadius: '50%', marginRight: '16px' }}
+          className="team-image"
+          src="/images/teamgirl.jpeg"
+          style={{
+            width: "64px", 
+            height: "64px", 
+            backgroundColor: "#f7fafc", 
+            objectFit: "cover", 
+            borderRadius: "50%", 
+            marginRight: "16px"
+          }}
         />
         <div>
-          <h2 style={{ color: '#D97706', fontWeight: '500', marginBottom: '4px' }}>Iqra Ikram</h2>
-          <p style={{ color: '#6B7280' }}>Software Engineer</p>
+          <h2 className="team-name" style={{
+            color: "#F6E05E", 
+            fontSize: "18px", 
+            fontWeight: "500"
+          }}>Iqra Ikram</h2>
+          <p className="team-role" style={{
+            color: "#A0AEC0", 
+            fontSize: "14px"
+          }}>Software Engineer</p>
         </div>
       </div>
 
       {/* Team Member 6 */}
-      <div style={{ flex: '1 1 calc(33.33% - 16px)', border: '1px solid #D1D5DB', padding: '16px', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
-        <Image
+      <div className="team-member" style={{
+        display: "flex", 
+        alignItems: "center", 
+        border: "1px solid #E5E5E5", 
+        padding: "16px", 
+        borderRadius: "8px",
+        backgroundColor: "#ffffff"
+      }}>
+        <img
           alt="team"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtQ-qHfCrm9svO3WvHfmIdxyPnucFcmTSuPA&s"
-          style={{ width: '64px', height: '64px', backgroundColor: '#F3F4F6', objectFit: 'cover', borderRadius: '50%', marginRight: '16px' }}
+          className="team-image"
+          src="/images/teamgirl.jpeg"
+          style={{
+            width: "64px", 
+            height: "64px", 
+            backgroundColor: "#f7fafc", 
+            objectFit: "cover", 
+            borderRadius: "50%", 
+            marginRight: "16px"
+          }}
         />
         <div>
-          <h2 style={{ color: '#D97706', fontWeight: '500', marginBottom: '4px' }}>Rija Zeeshan</h2>
-          <p style={{ color: '#6B7280' }}>DevOps</p>
+          <h2 className="team-name" style={{
+            color: "#F6E05E", 
+            fontSize: "18px", 
+            fontWeight: "500"
+          }}>Rija Zeeshan</h2>
+          <p className="team-role" style={{
+            color: "#A0AEC0", 
+            fontSize: "14px"
+          }}>DevOps</p>
         </div>
       </div>
 
-    </div>
-  </div>
+      {/* Team Member 7 */}
+      <div className="team-member" style={{
+        display: "flex", 
+        alignItems: "center", 
+        border: "1px solid #E5E5E5", 
+        padding: "16px", 
+        borderRadius: "8px",
+        backgroundColor: "#ffffff"
+      }}>
+        <img
+          alt="team"
+          className="team-image"
+          src="/images/teamgirl.jpeg"
+          style={{
+            width: "64px", 
+            height: "64px", 
+            backgroundColor: "#f7fafc", 
+            objectFit: "cover", 
+            borderRadius: "50%", 
+            marginRight: "16px"
+          }}
+        />
+        <div>
+          <h2 className="team-name" style={{
+            color: "#F6E05E", 
+            fontSize: "18px", 
+            fontWeight: "500"
+          }}>Areeba Khijli</h2>
+          <p className="team-role" style={{
+            color: "#A0AEC0", 
+            fontSize: "14px"
+          }}>Software Engineer</p>
+        </div>
+</div>
+</div>
+
+</div>
 </section>
-{/* contact us */}
+</div>
+
+
+
+
+
+  {/* contact us */}
 
 <section className="relative text-gray-300 body-font">
   <div
